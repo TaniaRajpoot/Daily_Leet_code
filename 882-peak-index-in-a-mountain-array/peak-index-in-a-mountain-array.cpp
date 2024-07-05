@@ -13,11 +13,18 @@ public:
 
 
     //log (n) wala lazmi binary search sy hi hoga 
-   int i =0;
     int n =arr.size();
-    while(i<n-1 && arr[i]<arr[i+1]){
-        i++;
+   int l =0;
+   int r=n-1;
+   while(l<r){
+    int mid = l+(r-l)/2;
+    if(arr[mid]<arr[mid+1]){
+        l = mid +1;
+    }else{
+        r =mid;
     }
-return i;
+
+   }
+   return l;
     }
 };
