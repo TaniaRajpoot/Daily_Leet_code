@@ -8,8 +8,8 @@ public:
             store.insert(i);
         }
 
-       for (char s : stones) {
-        if (store.count(s)) { // O(1) lookup
+       for (char it : stones) {
+        if (store.count(it)) { // O(1) lookup
             count++;
         }
          
